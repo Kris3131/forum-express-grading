@@ -99,9 +99,8 @@ const restaurantController = {
     // 撈出所有餐廳
     return Restaurant.findAll({
       // 餐廳：被很多使用者喜歡
-      include: [{ model: User, as: 'FavoritedUsers' }],
-      // 找出前十名的餐廳
-      limit: 10
+      include: [{ model: User, as: 'FavoritedUsers' }]
+
     })
       .then(restaurant => {
         const result = restaurant
@@ -111,6 +110,7 @@ const restaurantController = {
             isFavorited: req.user && req.user.FavoritedRestaurants.some(r => r.id === restaurant.id)
           }))
           .sort((a, b) => b.favoritedCount - a.favoritedCount)
+          .slice(0, 10)
         return res.render('top-restaurants', { restaurants: result })
       })
       .catch(err => next(err))

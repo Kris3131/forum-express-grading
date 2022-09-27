@@ -1,7 +1,7 @@
 const path = require('path')
 const express = require('express')
 const methodOverride = require('method-override')
-const routes = require('./routes')
+const { pages } = require('./routes')
 const exphbs = require('express-handlebars')
 const flash = require('connect-flash')
 const session = require('express-session')
@@ -38,7 +38,7 @@ app.use((req, res, next) => {
 })
 app.use(methodOverride('_method'))
 app.use('/upload', express.static(path.join(__dirname, 'upload')))
-app.use(routes)
+app.use(pages)
 
 app.listen(port, () => {
   console.info(`Example app listening on port ${port}!`)

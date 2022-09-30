@@ -15,25 +15,25 @@
 
 ## 和 Admin 有關的路由
 
-|  method  |             route              |     feature      |               detail               |
-| :------: | :----------------------------: | :--------------: | :--------------------------------: |
-|  `POST`  |     `/api/v1/admin/logIn`      |       登入       |     網站管理者可以登入網站後台     |
-|  `GET`   |  `/api/v1/admin/restaurants`   |   查看所有餐廳   |     網站管理者可以查看所有餐廳     |
-|  `GET`   | `/api/v1/admin/restaurant/:id` |   查看特定餐廳   |     網站管理者可以查看特定餐廳     |
-|  `PUT`   | `/api/v1/admin/restaurant/:id` |   修改特定餐廳   |      網站管理可以修改特定餐廳      |
-| `DELETE` | `/api/v1/admin/restaurant/:id` |   刪除特定餐廳   |      網站管理可以刪除特定餐廳      |
-|  `GET`   |   `/api/v1/admin/categories`   | 查看所有餐廳分類 |   網站管理者可以查看所有餐廳分類   |
-|  `POST`  |    `/api/v1/admin/category`    |   新增餐廳分類   |     網站管理者可以新增餐廳分類     |
-|  `PUT`   |  `/api/v1/admin/category/:id`  | 修改特定餐廳分類 |   網站管理者可以修改特定餐廳分類   |
-| `DELETE` |  `/api/v1/admin/category/:id`  | 刪除特定餐廳分類 |   網站管理者可以刪除特定餐廳分類   |
-| `PATCH`  |    `/api/v1/admin/user/:id`    |   調整管理權限   | 網站管理者可以修改特定用戶管理權限 |
+|  method  |              route              |     feature      |               detail               |
+| :------: | :-----------------------------: | :--------------: | :--------------------------------: |
+|  `POST`  |      `/api/v1/admin/logIn`      |       登入       |     網站管理者可以登入網站後台     |
+|  `GET`   |   `/api/v1/admin/restaurants`   |   查看所有餐廳   |     網站管理者可以查看所有餐廳     |
+|  `GET`   | `/api/v1/admin/restaurants/:id` |   查看特定餐廳   |     網站管理者可以查看特定餐廳     |
+|  `PUT`   | `/api/v1/admin/restaurants/:id` |   修改特定餐廳   |      網站管理可以修改特定餐廳      |
+| `DELETE` | `/api/v1/admin/restaurants/:id` |   刪除特定餐廳   |      網站管理可以刪除特定餐廳      |
+|  `GET`   |   `/api/v1/admin/categories`    | 查看所有餐廳分類 |   網站管理者可以查看所有餐廳分類   |
+|  `POST`  |   `/api/v1/admin/categories`    |   新增餐廳分類   |     網站管理者可以新增餐廳分類     |
+|  `PUT`   | `/api/v1/admin/categories/:id`  | 修改特定餐廳分類 |   網站管理者可以修改特定餐廳分類   |
+| `DELETE` | `/api/v1/admin/categories/:id`  | 刪除特定餐廳分類 |   網站管理者可以刪除特定餐廳分類   |
+| `PATCH`  |    `/api/v1/admin/users/:id`    |   調整管理權限   | 網站管理者可以修改特定用戶管理權限 |
 
 ## 和 Restaurant 有關的路由
 
 | method |                route                |    feature     |                 detail                 |
 | :----: | :---------------------------------: | :------------: | :------------------------------------: |
 | `GET`  |        `/api/v1/restaurants`        |  瀏覽所有餐廳  |            瀏覽所有餐廳資料            |
-| `GET`  |      `/api/v1/restaurant/:id`       |  瀏覽個別餐廳  |            個別餐廳詳細資料            |
+| `GET`  |      `/api/v1/restaurants/:id`      |  瀏覽個別餐廳  |            個別餐廳詳細資料            |
 | `GET`  | `/api/v1/restaurants?categoryId=OO` | 用分類篩選餐廳 | 瀏覽所有餐廳資料時，可以用分類篩選餐廳 |
 | `GET`  |    `/api/v1/restaurants/newest`     |  查看最新餐廳  |        查看最新上架的 10 筆餐廳        |
 
